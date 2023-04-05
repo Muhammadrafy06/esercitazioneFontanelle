@@ -1,3 +1,4 @@
+#realizzare un sito web che realizzi una tabella da uno degli esercizi di pandas
 from flask import Flask, render_template
 import pandas as pd
 import json

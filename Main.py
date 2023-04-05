@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
+    
     fileP = gpd.read_file("./fontanelle")
     print(fileP)
     return render_template("index.html")

@@ -2,10 +2,13 @@
 #L'utente seleziona da un menù a tendina il nome del quartiere, clicca sul bottone e ottiene la mappa del
 #quartiere prescelto con le fontanelle presenti
 from flask import Flask,render_template,request
+import geopandas as gpd
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
+    fileP = gpd.read_file("./fontanelle")
+    print(fileP)
     return render_template("index.html")
 
 

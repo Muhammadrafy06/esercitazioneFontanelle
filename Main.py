@@ -1,7 +1,11 @@
 #realizzare un sito web in flask che permetta all'utente di avere una mappa di un quartiere con le fontalle. 
 #L'utente seleziona da un menù a tendina il nome del quartiere, clicca sul bottone e ottiene la mappa del
 #quartiere prescelto con le fontanelle presenti
-from flask import Flask,render_template,request
+from flask import Flask, render_template
+import pandas as pd
+import json
+import plotly
+import plotly.express as px
 import geopandas as gpd
 app = Flask(__name__)
 

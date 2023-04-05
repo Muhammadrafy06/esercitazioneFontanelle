@@ -9,7 +9,8 @@ app = Flask(__name__)
 def home():
     
   
-    return render_template("index.html",)
+    return render_template("index.html")
+    
 
 @app.route('/map', methods=['GET'])
 def map():

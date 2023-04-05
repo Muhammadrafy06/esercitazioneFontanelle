@@ -8,10 +8,14 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def home():
     
-    fileP = gpd.read_file("./fontanelle")
-    print(fileP)
-    return render_template("index.html")
+  
+    return render_template("index.html",)
 
+@app.route('/map', methods=['GET'])
+def map():
+    
+    fileContent = gpd.read_file("./fontanelle")
+    return render_template("map.html")
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=8080, debug=True)
